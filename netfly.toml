@@ -2,3 +2,8 @@
 base = "."
 command = "yarn build"
 publish = "./build/"
+
+[build.enviroment]
+REACT_APP_ID='sendMailGmail'
+REACT_APP_TEMPLATE_ID='template_krzex9n'
+REACT_APP_USER_ID='user_RRstlvYVzvdVxt66MKUI6'
