@@ -5,7 +5,7 @@ export const Container = styled.div`
   background: var(--background);
 
   div {
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
     h1 {
       text-align: center;
@@ -14,9 +14,11 @@ export const Container = styled.div`
   }
 `
 export const Content = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
 
   div {
     * {

@@ -26,14 +26,13 @@ function App() {
   }
   return (
     <>
+      <GlobalStyle />
       <Header />
       <CallAction onOpenRegisterModal={handleOpenRegisterModal} />
       <RegisterModal isOpen={isRegisterModalOpen} onRequestClose={handleCloseRegisterModal} />
       <Feature />
       <Footer />
-      <GlobalStyle />
       <Section />
-
     </>
   );
 }

@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 import WImg from '../../assets/images/W.svg';
 
-
 export const Container = styled.div`
   display: flex;
   margin-top: -10rem;
   background: var(--background) url(${WImg}) no-repeat right top;
   background-size: 50rem;
+  flex-wrap: wrap;
 `
 
 export const Content = styled.div`
   padding-top: 10rem;
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 10rem auto;
   padding: 0 1rem 20rem;
   display: flex;

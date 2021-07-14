@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { FormEvent, useState } from 'react';
 import Modal from 'react-modal';
 
+import { LoginWithGoogle } from '../LoginWithGoogle'
+
 import { Container, RegisterTypeContainer } from './styles'
 
 import sendMail from '../../hooks/sendMailJS'
@@ -53,17 +55,16 @@ export function RegisterModal({isOpen, onRequestClose}: RegisterModalProps) {
 
     if(email!=="") {
       localStorage.setItem(`@landing.${email}`, fullName);
+      sendMail({
+        fullName,
+        from_name: "HiringCoders",
+        message: "Teste",
+      })
       clearFormFields();
       return
     } else {
      alert('Exists required fields')  
     }
-
-    sendMail({
-      fullName,
-      from_name: "HiringCoders",
-      message: "Teste",
-    })
   }
         
   return(
@@ -85,11 +86,9 @@ export function RegisterModal({isOpen, onRequestClose}: RegisterModalProps) {
         <h2>Como deseja se cadastrar</h2>
 
         <RegisterTypeContainer>
-          <button
-            onClick={() => {setRegisterType('google')}}
-          >
-            Conta do Google
-          </button>
+          <LoginWithGoogle
+            //onClick={() => {setRegisterType('google')}}
+          />
           <button
             onClick={() => setRegisterType('email')}
           >

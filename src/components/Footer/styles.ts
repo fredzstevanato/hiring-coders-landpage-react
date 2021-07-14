@@ -8,9 +8,10 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 
     img {
-      width: 980px;
+      width: 61.25rem;
    }
   }  
   
@@ -23,6 +24,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     
     p {
       text-align: center;

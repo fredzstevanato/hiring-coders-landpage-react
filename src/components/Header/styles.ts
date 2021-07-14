@@ -2,26 +2,35 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
   padding-top: 1rem;
+  background: var(--background);
+
 `
 export const Content = styled.div`
-  max-width: 1200px;
+  width: 75rem;
   margin: 0 auto;
 
   padding: 0 1rem 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   ul {
     list-style: none;
     display: flex;
-  }
+    flex-wrap: wrap;
 
-  li {
-    padding: 1rem;
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
-    color: var(--font-menu);
+
+    li {
+      padding: 1rem;
+      font-family: Roboto, sans-serif;
+      font-weight: 500;
+      color: var(--font-menu);
+
+      @media(max-width: 500px) {
+        flex-direction: column;
+      }
+    }
   }
 `;
 

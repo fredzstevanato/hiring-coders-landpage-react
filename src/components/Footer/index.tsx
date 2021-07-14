@@ -10,7 +10,7 @@ export function Footer() {
         </div>
         <div>
           <p>
-            WooCommerce - the <strong>most customizable eCommerce <br />
+            WooCommerce - the <strong>most customizable eCommerce
             platform</strong> for building <strong>your online business</strong>
           </p>
           <button>GET STARTED</button>
