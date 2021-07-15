@@ -1,10 +1,8 @@
-import { useEffect } from 'react';
 import { FormEvent, useState } from 'react';
 import Modal from 'react-modal';
+import GoogleLogin from 'react-google-login';
 
-import { LoginWithGoogle } from '../LoginWithGoogle'
-
-import { Container, RegisterTypeContainer } from './styles'
+import { Container, Content } from './styles'
 
 import sendMail from '../../hooks/sendMailJS'
 
@@ -15,18 +13,16 @@ interface RegisterModalProps {
 }
 
 export function RegisterModal({isOpen, onRequestClose}: RegisterModalProps) {
-  const [registerType, setRegisterType] = useState('');
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
 
-  useEffect(() => {
-      if(registerType==='google') {
-        alert('Method not implemented')
-        return
-      }
-
-  }, [registerType])
-
+  const responseGoogle = async (response: any) => {
+    const {name, email} = response.profileObj;
+    
+    setFullName(name);
+    setEmail(email)
+  }
+  
   function clearFormFields() {
     setEmail('');
     setFullName('');
@@ -42,8 +38,6 @@ export function RegisterModal({isOpen, onRequestClose}: RegisterModalProps) {
         const userAlreadyExist = JSON.stringify(localStorageItem);
 
         console.log(userAlreadyExist)
-
-        setRegisterType('email')
 
         alert(`E-mail ${userAlreadyExist} already exists.`)
   
@@ -84,35 +78,38 @@ export function RegisterModal({isOpen, onRequestClose}: RegisterModalProps) {
 
       <Container onSubmit={handleSubmit}>
         <h2>Como deseja se cadastrar</h2>
-
-        <RegisterTypeContainer>
-          <LoginWithGoogle
-            //onClick={() => {setRegisterType('google')}}
+        <Content>
+          <div>
+          <GoogleLogin
+            clientId={'90227753387-cjmpoqkt1daoqnneg8f8meuieglnqvgv.apps.googleusercontent.com'}
+            buttonText="Login with Google"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            cookiePolicy={'single_host_origin'}
           />
-          <button
-            onClick={() => setRegisterType('email')}
-          >
-            E-mail
-          </button>
-          { (registerType === 'email') 
-          ? (
-            <div>       
-              <input 
-                type="text" 
-                placeholder="Enter your fullname" 
-                value={fullName}
-                onChange={event => setFullName(event.target.value)}
-              />
-              <input 
-                type="email" 
-                placeholder="Enter your best email"
-                value={email}
-                onChange={event => setEmail(event.target.value)}
-              />
+          </div>
+          <div>
+              <div>
+                <p>Digite seu melhor e-mail <span>*</span></p>
+                <input 
+                  type="email" 
+                  placeholder="Enter your best email"
+                  value={email}
+                  onChange={event => setEmail(event.target.value)}
+                />
+              </div>
+              <div>
+                <p>Nome</p>
+                <input 
+                  type="text" 
+                  placeholder="Enter your fullname" 
+                  value={fullName}
+                  onChange={event => setFullName(event.target.value)}
+                />
+              </div>
+
             </div>
-          ) 
-          : '' }
-        </RegisterTypeContainer>
+          </Content>
         <button type="submit">Register</button>
       </Container>
     </Modal>

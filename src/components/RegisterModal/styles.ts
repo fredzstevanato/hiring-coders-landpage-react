@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.form`
-  background: black;
-  align-items: center;
+  margin: 0 auto;
 
   h2 {
-    color: #fff;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #272D4E;
+  }
+
+  h4 {
+
   }
 
   button[type="submit"] {
@@ -20,15 +25,46 @@ export const Container = styled.form`
     margin-top: 1.5rem;
     font-weight: 600;
     transition: filter 0.2s;
+    
     &:hover {
       filter: brightness(0.9);
     }
   }
 `
 
-export const RegisterTypeContainer = styled.div`
-  margin: 1rem 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;  
+export const Content = styled.div`
+  display: flex;
+  
+   > div {
+    margin: 0 auto;            
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  p {
+    text-align: left;
+    margin-bottom: 5px;
+
+    span {
+      color: red;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 30px;
+    border: 0;
+    color: #94A2B3;
+    font-weight: 400;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-size: 1rem;
+
+    :hover {
+      filter: drop-shadow(0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.2));
+    }
+  }
 `;

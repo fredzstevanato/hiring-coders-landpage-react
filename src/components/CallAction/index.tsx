@@ -1,5 +1,4 @@
-import { Container, Content } from './styles'
-import FeaturedImg from '../../assets/images/featured-image.svg';
+import { Container, Content, ContentRight, ContentLeft } from './styles'
 
 interface CallActionProps {
   onOpenRegisterModal: () => void;
@@ -9,27 +8,26 @@ export function CallAction({ onOpenRegisterModal }: CallActionProps) {
   return (
     <Container>
       <Content>
-        <div>
+        <ContentLeft>
           <h1>
-              Building exacly the <br />
-              eCommerce website <br />
-              you want
+            Dimensionamos e construimos
+            o seu eCommerce
           </h1>
           <h6>
-              WooCommerce is a customizable, open-source eCommerce platform built on WordPress.
-              Get stared quickly and make you way.
-          </h6>
-          <div>
-            <button
-              type="button" onClick={onOpenRegisterModal}
-            >
-              Start a New Store
-            </button>
-            <p>or</p>
-            <a href="/">Customize & Extend</a>
-          </div>
+            Trabalhamso com soluções open-source até as mais sofisticadas do mercado,
+            nós sabemos o que você precisa.
+        </h6>
+        <div>
+          <button
+            type="button" onClick={onOpenRegisterModal}
+          >
+            Clique e receba nosso contato
+          </button>
         </div>
-        <img src={FeaturedImg} alt="Featured" />
+        </ContentLeft>
+        <ContentRight>
+
+        </ContentRight>
       </Content>
     </Container>   
   )

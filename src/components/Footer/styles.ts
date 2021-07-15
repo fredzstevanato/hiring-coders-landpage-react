@@ -4,7 +4,7 @@ export const Container = styled.div`
   background: var(--background);
   
   div:first-child {
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +12,14 @@ export const Container = styled.div`
 
     img {
       width: 61.25rem;
-   }
+    }
+    
+    @media (max-width: 750px) {
+      img {
+        visibility: hidden;
+
+      }
+    }
   }  
   
   div:last-child {

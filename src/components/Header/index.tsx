@@ -1,23 +1,26 @@
 import { Container, Content, ContentButtons } from "./styles";
-import Logo from '../../assets/images/LOGO.svg';
 
-export function Header() {
+interface HeaderProps {
+  onOpenRegisterModal: () => void;
+}
+
+export function Header({ onOpenRegisterModal }: HeaderProps) {
   return (
     <Container>
       <Content>
-        <img src={Logo} alt="Woo commerce" />
+        <p>COACH <span>Commerce</span></p>
         <div>
           <ul>
-            <li>Sell</li>
-            <li>Marktplace</li>
-            <li>Community</li>
-            <li>Develop</li>
-            <li>Resources</li>
+            <li>Vendas</li>
+            <li>Clientes</li>
+            <li>Comunidade</li>
+            <li>Nosso Time</li>
+            <li>Recurso</li>
           </ul>
         </div>
         <ContentButtons>
           <a href="/">Log In</a>
-          <button>Get Started</button>
+          <button onClick={onOpenRegisterModal}>Começe aqui</button>
         </ContentButtons>
       </Content>
     </Container>

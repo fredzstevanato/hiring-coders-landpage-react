@@ -8,36 +8,34 @@ export function Feature() {
     <Container>
       <div>
         <h1>
-          Your eCommerce <br />
-          made simple
+          Seu eCommerce <br />
+          de um jeito simples
         </h1>
         <Content>
           <div>
             <img src={Comp1Img} alt="All you need to start" />
-            <h4>All You Need to Start</h4>
+            <h4>Tudo que você precisa</h4>
             <p>
-              Add WooCommerce plugin to any WordPress site and <br />
-              se up a new store in minutes
+              Criamos eu eCommerce e entregamos no menor prazo.
             </p>
-            <a href="/">Ecommerce for Wordpress </a>
+            <a href="">Lista de Prazos</a>
           </div>
           <div>
             <img src={Comp2Img} alt="All you need to start" />
-            <h4>All You Need to Start</h4>
+            <h4>Ingetrações</h4>
             <p>
-              Add WooCommerce plugin to any WordPress site and <br />
-              se up a new store in minutes
+              Integramos com qualquer API existente no mecardo.
             </p>
-            <a href="/">Ecommerce for Wordpress </a>
+            <a href="">Conheça as principais soluções</a>
           </div>
           <div>
             <img src={Comp3Img} alt="All you need to start" />
-            <h4>All You Need to Start</h4>
+            <h4>Não importa seu tamanho</h4>
             <p>
-              Add WooCommerce plugin to any WordPress site and <br />
-              se up a new store in minutes
+              Temos soluções para o pequenos e <br />
+              e grandes varegistras.
             </p>
-            <a href="/">Ecommerce for Wordpress </a>
+            <a href="">Ecommerce for Wordpress </a>
           </div>
         </Content>
       </div>

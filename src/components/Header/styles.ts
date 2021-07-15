@@ -15,20 +15,40 @@ export const Content = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
 
-  ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+  @media (max-width: 750px) {
+    width: 100%;
+    ul {
+      visibility: hidden;
+    }
+  }
 
+  p {
+    font-family: Anton, sans-serif;
+    font-size: 2rem;
+    font-weight: 1000;
+    color: #9B5C8F;
 
-    li {
-      padding: 1rem;
-      font-family: Roboto, sans-serif;
-      font-weight: 500;
-      color: var(--font-menu);
+    span {
+      font-family: Anton, sans-serif;
+      font-size: 1.5rem;
+      color: #000;
+      line-height: 150%;
+    }
+  }
+ 
+  div{
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-      @media(max-width: 500px) {
-        flex-direction: column;
+      li {
+        padding: 1rem;
+        font-family: Roboto, sans-serif;
+        font-weight: 500;
+        color: var(--font-menu);
+
       }
     }
   }

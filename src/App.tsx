@@ -4,10 +4,12 @@ import { Header } from './components/Header';
 import { CallAction } from './components/CallAction';
 import { Feature } from './components/Feature';
 import { Footer } from './components/Footer';
-import { Section } from './components/Section';
 import { RegisterModal } from './components/RegisterModal'
 import Modal from 'react-modal';
 import { useState } from 'react';
+import { Depoiment } from './components/Depoiment';
+import { StopWatch } from './components/CallAction/Stopwatch';
+
 
 Modal.setAppElement('#root');
 
@@ -27,12 +29,13 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
+      <Header onOpenRegisterModal={handleOpenRegisterModal}/>
       <CallAction onOpenRegisterModal={handleOpenRegisterModal} />
+      <StopWatch />
       <RegisterModal isOpen={isRegisterModalOpen} onRequestClose={handleCloseRegisterModal} />
       <Feature />
+      <Depoiment />
       <Footer />
-      <Section />
     </>
   );
 }
