@@ -12,6 +12,8 @@ interface RegisterModalProps {
   onRequestClose: () => void;
 }
 
+const {REACT_APP_GOOGLE_ID} = process.env;
+
 export function RegisterModal({isOpen, onRequestClose}: RegisterModalProps) {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
@@ -81,7 +83,7 @@ export function RegisterModal({isOpen, onRequestClose}: RegisterModalProps) {
         <Content>
           <div>
           <GoogleLogin
-            clientId={'90227753387-cjmpoqkt1daoqnneg8f8meuieglnqvgv.apps.googleusercontent.com'}
+            clientId={`${REACT_APP_GOOGLE_ID}`}
             buttonText="Login with Google"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
