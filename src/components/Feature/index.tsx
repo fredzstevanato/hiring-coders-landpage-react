@@ -18,7 +18,7 @@ export function Feature() {
             <p>
               Criamos eu eCommerce e entregamos no menor prazo.
             </p>
-            <a href="">Lista de Prazos</a>
+            <a href="/">Lista de Prazos</a>
           </div>
           <div>
             <img src={Comp2Img} alt="All you need to start" />
@@ -26,7 +26,7 @@ export function Feature() {
             <p>
               Integramos com qualquer API existente no mecardo.
             </p>
-            <a href="">Conheça as principais soluções</a>
+            <a href="/">Conheça as principais soluções</a>
           </div>
           <div>
             <img src={Comp3Img} alt="All you need to start" />
@@ -35,7 +35,7 @@ export function Feature() {
               Temos soluções para o pequenos e <br />
               e grandes varegistras.
             </p>
-            <a href="">Ecommerce for Wordpress </a>
+            <a href="/">Ecommerce for Wordpress </a>
           </div>
         </Content>
       </div>
