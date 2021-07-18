@@ -9,6 +9,7 @@ import Modal from 'react-modal';
 import { useState } from 'react';
 import { Depoiment } from './components/Depoiment';
 import { StopWatch } from './components/CallAction/Stopwatch';
+import { SocialMedia } from './components/SocialMedia';
 
 
 Modal.setAppElement('#root');
@@ -36,6 +37,7 @@ function App() {
       <Feature />
       <Depoiment />
       <Footer />
+      <SocialMedia />
     </>
   );
 }

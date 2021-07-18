@@ -5,7 +5,7 @@ import { Container, Percent, Content } from './styles';
 
 export function StopWatch() {
   const [ isCloseSW, setIsCloseSW] = useState(false);
-  const dateFrom = new Date("07/18/2021").getTime();
+  const dateFrom = new Date("11/26/2021").getTime();
   const dateTo = Date.now();
 
   const dateResult = (dateFrom - dateTo);

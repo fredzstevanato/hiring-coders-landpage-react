@@ -33,38 +33,29 @@ export const Container = styled.form`
 `
 
 export const Content = styled.div`
-  display: flex;
-  
-   > div {
     margin: 0 auto;            
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
     gap: 1rem;
-  }
 
-  p {
-    text-align: left;
-    margin-bottom: 5px;
-
+  label {
     span {
       color: red;
     }
-  }
 
-  input {
-    width: 100%;
-    height: 30px;
-    border: 0;
-    color: #94A2B3;
-    font-weight: 400;
-    border-radius: 8px;
-    padding-left: 10px;
-    font-size: 1rem;
+    input {
+      width: 100%;
+      height: 30px;
+      border: 0;
+      color: #94A2B3;
+      font-weight: 400;
+      border-radius: 8px;
+      padding-left: 10px;
+      font-size: 1rem;
 
-    :hover {
-      filter: drop-shadow(0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.2));
-    }
+      :hover {
+        filter: drop-shadow(0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.2));
+      }
+    } 
   }
 `;

@@ -1,7 +1,6 @@
 import { Container } from './styles';
 import PeopleImg from '../../assets/images/people-section.svg';
 
-
 export function Footer() {
   return (
     <Container>

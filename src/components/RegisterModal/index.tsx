@@ -82,34 +82,32 @@ export function RegisterModal({isOpen, onRequestClose}: RegisterModalProps) {
         <h2>Como deseja se cadastrar</h2>
         <Content>
           <div>
-          <GoogleLogin
-            clientId={`${REACT_APP_GOOGLE_ID}`}
-            buttonText="Login with Google"
-            onSuccess={responseGoogle}
-            onFailure={responseGoogle}
-            cookiePolicy={'single_host_origin'}
-          />
+            <GoogleLogin
+              clientId={`${REACT_APP_GOOGLE_ID}`}
+              buttonText="Login with Google"
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+              cookiePolicy={'single_host_origin'}
+            />
           </div>
           <div>
-              <div>
-                <p>Digite seu melhor e-mail <span>*</span></p>
-                <input 
+              <label>Digite seu melhor e-mail <span>*</span>
+                <input
                   type="email" 
-                  placeholder="Enter your best email"
+                  required
+                  placeholder="Insira seu melhor email"
                   value={email}
                   onChange={event => setEmail(event.target.value)}
-                />
-              </div>
-              <div>
-                <p>Nome</p>
+                />               
+              </label>
+              <label>Nome
                 <input 
                   type="text" 
-                  placeholder="Enter your fullname" 
+                  placeholder="Insira seu nome" 
                   value={fullName}
                   onChange={event => setFullName(event.target.value)}
                 />
-              </div>
-
+              </label>
             </div>
           </Content>
         <button type="submit">Register</button>

@@ -64,8 +64,7 @@ export const ContentButtons = styled.div`
   a {
     text-decoration: none;
     padding-right: 2.375rem;
-    color: var(--font-menu);
-    
+    color: var(--font-menu);   
   }
 
   button {
